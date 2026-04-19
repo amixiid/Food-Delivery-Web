@@ -2,7 +2,10 @@
   "name": "fooddash",
   "version": "1.0.0",
   "description": "FoodDash - Full-Stack Food Delivery App",
+  "license": "MIT",
   "scripts": {
+    "build": "npm install && cd server && npm install && cd ../client && npm install && npm run build",
+    "start": "cd server && node server.js",
     "server": "cd server && npm start",
     "client": "cd client && npm run dev",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
