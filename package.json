@@ -1,0 +1,14 @@
+{
+  "name": "fooddash",
+  "version": "1.0.0",
+  "description": "FoodDash - Full-Stack Food Delivery App",
+  "scripts": {
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "seed": "cd server && node seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
