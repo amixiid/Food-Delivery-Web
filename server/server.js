@@ -31,6 +31,19 @@ app.use('/api/upload', require('./routes/uploadRoutes'));
 // Serve uploads folder
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
+// Serve Frontend in Production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+
+    app.get('*', (req, res) =>
+        res.sendFile(path.resolve(__dirname, '..', 'client', 'dist', 'index.html'))
+    );
+} else {
+    app.get('/', (req, res) => {
+        res.send('API is running...');
+    });
+}
+
 // Error Handling Middleware
 app.use(notFound);
 app.use(errorHandler);
