@@ -108,8 +108,7 @@ Food-Delivery/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Food-Delivery-Web.git
-cd Food-Delivery-Web
+git clone https://github.com/amixiid/Food-Delivery-Web
 ```
 
 ### 2. Setup the Backend
